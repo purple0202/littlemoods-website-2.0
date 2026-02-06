@@ -1,0 +1,53 @@
+.border-decor {
+    position: fixed;
+    width: 120px;
+    height: 120px;
+    pointer-events: none;
+    z-index: 10;
+    opacity: 0;
+  }
+
+  /* Corners */
+  .top-left {
+    top: 0;
+    left: 0;
+  }
+  
+  .top-right {
+    top: 0;
+    right: 0;
+  }
+  
+  .bottom-left {
+    bottom: 0;
+    left: 0;
+  }
+  
+  .bottom-right {
+    bottom: 0;
+    right: 0;
+  }
+  
+  .leaves {
+    background: url("assets/leaf1.png") no-repeat center / contain;
+    transform-origin: center;
+    transform: translateY(-80px) rotate(-120deg);
+    transition: transform 1.2s ease-out, opacity 0.8s ease-out;
+  }
+  
+  .loaded .leaves {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+
+
+  .flower {
+    background: url("assets/leaf1.webp") no-repeat center / contain;
+    transform: scale(0);
+    transition: transform 1s ease-out, opacity 0.6s ease-out;
+  }
+
+  .top-left { transition-delay: 0.1s; }
+.top-right { transition-delay: 0.3s; }
+.bottom-left { transition-delay: 0.5s; }
+.bottom-right { transition-delay: 0.7s; }
