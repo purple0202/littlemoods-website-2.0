@@ -1,3 +1,9 @@
+import * as THREE from 'https://unpkg.com/three@0.158.0/build/three.module.js';
+import { OBJLoader } from 'https://unpkg.com/three@0.158.0/examples/jsm/loaders/OBJLoader.js';
+
+const loader = new OBJLoader();
+
+
 window.addEventListener("DOMContentLoaded", () => {
     document.body.classList.add("loaded");
   });
@@ -30,7 +36,7 @@ const textureLoader = new THREE.TextureLoader();
 const texture = textureLoader.load("assets/objs/gnoblin purple texture.png");
 texture.flipY = false;
 
-const loader = new THREE.OBJLoader();
+// const loader = new THREE.OBJLoader();
 loader.load("assets/objs/gnoblin.obj", (object) => {
 
   object.traverse((child) => {
