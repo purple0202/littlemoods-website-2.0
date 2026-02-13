@@ -36,6 +36,9 @@ const textureLoader = new THREE.TextureLoader();
 const texture = textureLoader.load("assets/objs/gnoblin purple texture.png");
 texture.flipY = false;
 
+<script type="module" src="app.js"></script>
+
+
 // const loader = new THREE.OBJLoader();
 loader.load("assets/objs/gnoblin.obj", (object) => {
 
